@@ -1,0 +1,125 @@
+config:
+    '!ActivitiesEnum.Dancing':
+        ConnectionWords.With:
+        -   '!PersonEnum'
+    '!ActivitiesEnum.Disobeying':
+    -   '!PersonEnum':
+            additional:
+                chance: 25
+                sequence:
+                    ConnectionWords.With:
+                    -   '!PersonEnum.Pimpek'
+    '!ActivitiesEnum.Flirting':
+        ConnectionWords.With:
+        -   '!PersonEnum'
+    '!ActivitiesEnum.Playing':
+        VariousEnum.Music:
+            additional:
+                chance: 25
+                sequence:
+                    ConnectionWords.On:
+                    -   '!VideosWhere'
+    '!ActivitiesEnum.Praising':
+    -   '!PersonEnum'
+    -   '!GamesEnum'
+    '!ActivitiesEnum.Teaching':
+        ConnectionWords.About:
+        -   '!PersonEnum'
+        -   '!GamesEnum'
+        -   '!ActivitiesEnum'
+    '!ActivitiesEnum.Watching':
+    -   VariousEnum.Videos:
+            ConnectionWords.About:
+            -   '!GamesEnum'
+            -   '!PersonEnum'
+            -   '!VariousEnum.Cooking'
+            -   '!VariousEnum.Games'
+            -   '!VariousEnum.Music'
+            -   '!ActivitiesEnum.Dancing'
+            -   ConnectionWords.Making:
+                -   '!VariousEnum.Games'
+                -   '!FoodEnum'
+            -   '!TopicEnum'
+            additional:
+                chance: 25
+                sequence:
+                    ConnectionWords.On:
+                    -   '!VideosWhere':
+                            additional:
+                                chance: 25
+                                sequence:
+                                    ConnectionWords.With:
+                                    -   '!PersonEnum'
+                    ConnectionWords.With:
+                    -   '!PersonEnum.Pimpek'
+    -   '!TopicEnum.Hentai'
+enums:
+    '!ActivitiesEnum':
+        Arguing: arguing
+        Calibrating: calibrating
+        Dancing: dancing
+        Disobeying: disobeying
+        Drinking: drinking
+        Eating: eating
+        Flirting: flirting
+        Hugging: hugging
+        Interviewing: interviewing
+        Liking: liking
+        Listening: listening
+        Obtaining: obtaining
+        Playing: playing
+        Posting: posting
+        Praising: praising
+        Preaching: preaching
+        Preparing: preparing
+        Running: running
+        Talking: talking
+        Teaching: teaching
+        Visiting: visiting
+        Watching: watching
+    '!ConnectionWords':
+        About: about
+        Making: making
+        Nothing: ''
+        On: on
+        Some: some
+        Space: ' '
+        With: with
+    '!FoodEnum':
+        Burrito: Burrito
+        Egg: Egg
+        Eggs: Eggs
+        Pizza: Pizza
+    '!GamesEnum':
+        Gothic: Gothic
+        Gothic_2: Gothic 2
+        Gothic_3: Gothic 3
+        Guild_Wars_2: Guild Wars 2
+        Kenshi: Kenshi
+        Monster_Hunter_World: Monster Hunter World
+        Sims: Sims
+        Stalker: Stalker
+    '!PersonEnum':
+        Beldum: Beldum
+        CanceRat: CanceRat
+        Garrus: Garrus
+        Grogu: Grogu
+        Jackpot: Jackpot
+        Jeanette: Jeanette
+        Karo: Karo
+        Karoinna: Karoinna
+        KazioWihura: KazioWihura
+        KregierMinion: KregierMinion
+        Kyle: Kyle
+        Pimpek: Pimpek
+        Tali: Tali
+        Therese: Therese
+    '!TopicEnum':
+        Cosplay: Cosplay
+        Hentai: Hentai
+    '!VariousEnum':
+        Cooking: cooking
+        Games: games
+        Music: music
+        Photo: photo
+        Videos: videos
